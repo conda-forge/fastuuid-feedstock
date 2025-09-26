@@ -10,8 +10,10 @@ source:
   sha256: d755dc132addb369877429622535dfb52d79c8968a8a98f15a84c3da1db013c7
 
 build:
-  number: 0
+  number: 1
   skip: true  # [osx and py==310]
+  script_env:
+    - PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
