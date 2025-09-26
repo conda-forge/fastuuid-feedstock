@@ -1,5 +1,5 @@
 {% set name = "fastuuid" %}
-{% set version = "0.13.3" %}
+{% set version = "0.13.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastuuid-{{ version }}.tar.gz
-  sha256: d755dc132addb369877429622535dfb52d79c8968a8a98f15a84c3da1db013c7
+  sha256: d4976821ab424d41542e1ea39bc828a9d454c3f8a04067c06fca123c5b95a1a1
 
 build:
   number: 0
