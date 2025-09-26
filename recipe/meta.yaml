@@ -1,5 +1,5 @@
 {% set name = "fastuuid" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastuuid-{{ version }}.tar.gz
-  sha256: d0bd4e5b35aad2826403f4411937c89e7c88857b1513fe10f696544c03e9bd8e
+  sha256: d755dc132addb369877429622535dfb52d79c8968a8a98f15a84c3da1db013c7
 
 build:
   number: 0
   skip: true  # [osx and py==310]
-  script: 
+  script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
@@ -46,7 +46,7 @@ about:
   summary: "Python bindings to Rust's UUID library."
   home: https://github.com/fastuuid/fastuuid
   license: BSD-3-Clause
-  license_file: 
+  license_file:
     - LICENSE
     - THIRDPARTY.yml
 
